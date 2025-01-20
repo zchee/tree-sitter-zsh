@@ -2,19 +2,70 @@
   "name": "tree-sitter-zsh",
   "version": "1.0.0",
   "description": "ZSH grammar for tree-sitter",
-  "main": "bindings/node",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "homepage": "https://github.com/zchee/tree-sitter-zsh#readme",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zchee/tree-sitter-zsh.git"
   },
-  "author": "Amaan Qureshi <amaanq12@gmail.com>",
   "license": "MIT",
+  "author": "Amaan Qureshi <amaanq12@gmail.com>",
+  "maintainers": [
+    {
+      "name": "Amaan Qureshi",
+      "email": "amaanq12@gmail.com"
+    },
+    {
+      "name": "Koichi Shiraishi",
+      "email": "zchee.io@gmail.com"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/zchee/tree-sitter-zsh/issues"
+  },
+  "main": "bindings/node",
+  "types": "bindings/node",
+  "keywords": [
+    "incremental",
+    "parsing",
+    "tree-sitter",
+    "zsh"
+  ],
+  "files": [
+    "grammar.js",
+    "tree-sitter.json",
+    "binding.gyp",
+    "prebuilds/**",
+    "bindings/node/*",
+    "queries/*",
+    "src/**",
+    "*.wasm"
+  ],
   "dependencies": {
-    "nan": "^2.17.0",
+    "node-addon-api": "^8.3.0",
+    "node-gyp-build": "^4.8.4",
     "tree-sitter-bash": "github:tree-sitter/tree-sitter-bash"
   },
   "devDependencies": {
-    "eslint": "^8.48.0",
-    "eslint-config-google": "^0.14.0",
-    "tree-sitter-cli": "^0.20.8"
+    "eslint": "^9.12.0",
+    "eslint-config-treesitter": "^1.0.2",
+    "prebuildify": "^6.0.1",
+    "tree-sitter-cli": "https://gitpkg.vercel.app/zchee/tree-sitter-cli/cli/npm?tree-sitter-cli"
+  },
+  "peerDependencies": {
+    "tree-sitter": "^0.21.1"
+  },
+  "peerDependenciesMeta": {
+    "tree-sitter": {
+      "optional": true
+    }
+  },
+  "scripts": {
+    "install": "node-gyp-build",
+    "lint": "eslint grammar.js",
+    "generate": "npx tree-sitter-cli generate --build",
+    "prestart": "npx tree-sitter-cli build --debug",
+    "start": "npx tree-sitter-cli playground",
+    "test": "node --test bindings/node/*_test.js"
   }
 }

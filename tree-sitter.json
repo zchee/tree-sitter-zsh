@@ -1,0 +1,36 @@
+{
+  "grammars": [
+    {
+      "name": "zsh",
+      "camelcase": "Zsh",
+      "scope": "source.zsh",
+      "file-types": [
+        ".zsh"
+      ],
+      "highlights": "queries/highlights.scm",
+      "injection-regex": "^zsh$"
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "license": "MIT",
+    "description": "ZSH grammar for tree-sitter",
+    "authors": [
+      {
+        "name": "Amaan Qureshi",
+        "email": "amaanq12@gmail.com"
+      }
+    ],
+    "links": {
+      "repository": "https://github.com/zchee/tree-sitter-zsh"
+    }
+  },
+  "bindings": {
+    "c": true,
+    "go": true,
+    "node": true,
+    "python": true,
+    "rust": true,
+    "swift": true
+  }
+}
