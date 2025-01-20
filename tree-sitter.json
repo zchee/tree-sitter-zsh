@@ -4,11 +4,16 @@
       "name": "zsh",
       "camelcase": "Zsh",
       "scope": "source.zsh",
+      "path": ".",
       "file-types": [
-        ".zsh"
+        "zsh",
+        ".zshrc",
+        ".zshenv",
+        ".zprofile"
       ],
       "highlights": "queries/highlights.scm",
-      "injection-regex": "^zsh$"
+      "injection-regex": "^(shell|bash|sh)$",
+      "first-line-regex": "^#!.*\\b(sh|bash|dash)\\b.*$"
     }
   ],
   "metadata": {

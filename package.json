@@ -50,10 +50,10 @@
     "eslint": "^9.12.0",
     "eslint-config-treesitter": "^1.0.2",
     "prebuildify": "^6.0.1",
-    "tree-sitter-cli": "https://gitpkg.vercel.app/zchee/tree-sitter-cli/cli/npm?tree-sitter-cli"
+    "tree-sitter-cli": "^0.24.7"
   },
   "peerDependencies": {
-    "tree-sitter": "^0.21.1"
+    "tree-sitter": "github:tree-sitter/tree-sitter"
   },
   "peerDependenciesMeta": {
     "tree-sitter": {
