@@ -9,17 +9,17 @@ importers:
   .:
     dependencies:
       node-addon-api:
-        specifier: ^8.3.0
+        specifier: ^8.3.1
         version: 8.3.1
       node-gyp-build:
         specifier: ^4.8.4
         version: 4.8.4
       tree-sitter-bash:
-        specifier: ^0.23.3
-        version: 0.23.3(tree-sitter@0.22.4)
+        specifier: github:tree-sitter/tree-sitter-bash
+        version: https://codeload.github.com/tree-sitter/tree-sitter-bash/tar.gz/0c46d792d54c536be5ff7eb18eb95c70fccdb232
     devDependencies:
       eslint:
-        specifier: ^9.12.0
+        specifier: ^9.25.1
         version: 9.25.1
       eslint-config-treesitter:
         specifier: ^1.0.2
@@ -27,9 +27,6 @@ importers:
       prebuildify:
         specifier: ^6.0.1
         version: 6.0.1
-      tree-sitter:
-        specifier: ^0.22.4
-        version: 0.22.4
       tree-sitter-cli:
         specifier: ^0.24.7
         version: 0.24.7
@@ -473,8 +470,9 @@ packages:
     resolution: {integrity: sha512-ujeqbceABgwMZxEJnk2HDY2DlnUZ+9oEcb1KzTVfYHio0UE6dG71n60d8D2I4qNvleWrrXpmjpt7vZeF1LnMZQ==}
     engines: {node: '>=6'}
 
-  tree-sitter-bash@0.23.3:
-    resolution: {integrity: sha512-36cg/GQ2YmIbeiBeqeuh4fBJ6i4kgVouDaqTxqih5ysPag+zHufyIaxMOFeM8CeplwAK/Luj1o5XHqgdAfoCZg==}
+  tree-sitter-bash@https://codeload.github.com/tree-sitter/tree-sitter-bash/tar.gz/0c46d792d54c536be5ff7eb18eb95c70fccdb232:
+    resolution: {tarball: https://codeload.github.com/tree-sitter/tree-sitter-bash/tar.gz/0c46d792d54c536be5ff7eb18eb95c70fccdb232}
+    version: 0.23.3
     peerDependencies:
       tree-sitter: ^0.21.1
     peerDependenciesMeta:
@@ -485,9 +483,6 @@ packages:
     resolution: {integrity: sha512-o4gnE82pVmMMhJbWwD6+I9yr4lXii5Ci5qEQ2pFpUbVy1YiD8cizTJaqdcznA0qEbo7l2OneI1GocChPrI4YGQ==}
     engines: {node: '>=12.0.0'}
     hasBin: true
-
-  tree-sitter@0.22.4:
-    resolution: {integrity: sha512-usbHZP9/oxNsUY65MQUsduGRqDHQOou1cagUSwjhoSYAmSahjQDAVsh9s+SlZkn8X8+O1FULRGwHu7AFP3kjzg==}
 
   type-check@0.4.0:
     resolution: {integrity: sha512-XleUoc9uwGXqjWwXaUTZAmzMcFZ5858QA2vvx1Ur5xIcixXIP+8LnFDgRplU30us6teqdlskFfu+ae4K79Ooew==}
@@ -961,19 +956,12 @@ snapshots:
       inherits: 2.0.4
       readable-stream: 3.6.2
 
-  tree-sitter-bash@0.23.3(tree-sitter@0.22.4):
+  tree-sitter-bash@https://codeload.github.com/tree-sitter/tree-sitter-bash/tar.gz/0c46d792d54c536be5ff7eb18eb95c70fccdb232:
     dependencies:
       node-addon-api: 8.3.1
       node-gyp-build: 4.8.4
-    optionalDependencies:
-      tree-sitter: 0.22.4
 
   tree-sitter-cli@0.24.7: {}
-
-  tree-sitter@0.22.4:
-    dependencies:
-      node-addon-api: 8.3.1
-      node-gyp-build: 4.8.4
 
   type-check@0.4.0:
     dependencies:
