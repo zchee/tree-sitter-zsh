@@ -7,6 +7,7 @@
       ],
       "include_dirs": [
         "src",
+        "<!(node -e \"require('nan')\")",
       ],
       "sources": [
         "bindings/node/binding.cc",

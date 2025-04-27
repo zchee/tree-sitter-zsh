@@ -41,31 +41,32 @@
     "src/**",
     "*.wasm"
   ],
+  "scripts": {
+    "install": "node-gyp-build",
+    "lint": "eslint grammar.js",
+    "generate": "pnpx tree-sitter-cli generate --build",
+    "prestart": "pnpx tree-sitter-cli build --debug",
+    "start": "pnpx tree-sitter-cli playground",
+    "test": "node --test bindings/node/*_test.js"
+  },
   "dependencies": {
     "node-addon-api": "^8.3.0",
     "node-gyp-build": "^4.8.4",
-    "tree-sitter-bash": "github:tree-sitter/tree-sitter-bash"
+    "tree-sitter-bash": "^0.23.3"
   },
   "devDependencies": {
     "eslint": "^9.12.0",
     "eslint-config-treesitter": "^1.0.2",
     "prebuildify": "^6.0.1",
+    "tree-sitter": "^0.22.4",
     "tree-sitter-cli": "^0.24.7"
   },
-  "peerDependencies": {
-    "tree-sitter": "github:tree-sitter/tree-sitter"
+  "override": {
+    "tree-sitter": "^0.22.4"
   },
   "peerDependenciesMeta": {
     "tree-sitter": {
       "optional": true
     }
-  },
-  "scripts": {
-    "install": "node-gyp-build",
-    "lint": "eslint grammar.js",
-    "generate": "npx tree-sitter-cli generate --build",
-    "prestart": "npx tree-sitter-cli build --debug",
-    "start": "npx tree-sitter-cli playground",
-    "test": "node --test bindings/node/*_test.js"
   }
 }
