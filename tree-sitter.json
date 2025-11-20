@@ -9,13 +9,14 @@
       "file-types": [
         "zsh"
       ],
-      "injection-regex": "^zsh$",
-      "class-name": "TreeSitterZsh"
+      "class-name": "TreeSitterZsh",
+      "injection-regex": "^(zsh)$",
+      "first-line-regex": "^#!.*\\b(zsh)\\b.*$"
     }
   ],
   "metadata": {
     "version": "0.1.0",
-    "license": "Apache-2.0",
+    "license": "MIT",
     "description": "Zsh grammar for tree-sitter",
     "authors": [
       {

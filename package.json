@@ -52,7 +52,7 @@
   "dependencies": {
     "node-addon-api": "^8.5.0",
     "node-gyp-build": "^4.8.4",
-    "tree-sitter-bash": "github:tree-sitter/tree-sitter-bash"
+    "tree-sitter-bash": "^0.25.0"
   },
   "devDependencies": {
     "eslint": "^9.39.1",
