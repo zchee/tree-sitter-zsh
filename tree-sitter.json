@@ -1,0 +1,39 @@
+{
+  "$schema": "https://tree-sitter.github.io/tree-sitter/assets/schemas/config.schema.json",
+  "grammars": [
+    {
+      "name": "zsh",
+      "camelcase": "Zsh",
+      "title": "Zsh",
+      "scope": "source.zsh",
+      "file-types": [
+        "zsh"
+      ],
+      "injection-regex": "^zsh$",
+      "class-name": "TreeSitterZsh"
+    }
+  ],
+  "metadata": {
+    "version": "0.1.0",
+    "license": "Apache-2.0",
+    "description": "Zsh grammar for tree-sitter",
+    "authors": [
+      {
+        "name": "Koichi Shiraishi",
+        "email": "zchee.io@gmail.com"
+      }
+    ],
+    "links": {
+      "repository": "https://github.com/zchee/tree-sitter-zsh"
+    }
+  },
+  "bindings": {
+    "c": true,
+    "go": true,
+    "node": true,
+    "python": true,
+    "rust": true,
+    "swift": true,
+    "zig": false
+  }
+}
