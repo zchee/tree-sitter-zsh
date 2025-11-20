@@ -22,8 +22,8 @@
     "description": "ZSH grammar for tree-sitter",
     "authors": [
       {
-        "name": "Amaan Qureshi",
-        "email": "amaanq12@gmail.com"
+        "name": "Koichi Shiraishi",
+        "email": "zchee.io@gmail.com"
       }
     ],
     "links": {
@@ -36,6 +36,7 @@
     "node": true,
     "python": true,
     "rust": true,
-    "swift": true
+    "swift": true,
+    "zig": true
   }
 }
